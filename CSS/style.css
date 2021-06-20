@@ -1,10 +1,11 @@
 /* Start Variables */
 :root {
   --main-color: crimson;
+  --bg-image:background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  --section-padding:100px;
 }
 /* End Variables */
 /* Start Global Rules */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;300;600;700;800;900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -269,3 +270,95 @@ h2 {
   line-height: 1.4;
   color: #b9b9b9;
 }
+/* start Recent Projects */
+.projects {
+  padding: var(--section-padding) 0;
+  margin: 0 auto;
+}
+.projects .main-heading {
+  text-align: center;
+  color: black;
+  font-size: 30px;
+  margin-bottom: 30px;
+  text-transform: uppercase
+}
+.projects .main-heading h1 {
+  font-weight: 300;
+}
+.projects .main-heading span {
+  color: crimson;
+}
+.projects .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 833px;
+}
+.projects .container .box {
+  width: 800px;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.projects .container .two,
+.projects .container .four {
+  flex-direction: row-reverse;
+}
+@media (max-width:833px) {
+  .projects .container {
+    width: fit-content;
+    padding: 0;
+  }
+  .projects .container .box {
+    flex-direction: column;
+    margin: 0 auto;
+    width: fit-content;
+  }
+}
+.projects .container .box .image {
+  max-width: 400px;
+  height: 250px;
+  position: relative;
+}
+.projects .container .box .image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41 50 60 / 60%);
+}
+.projects .container .box .image img {
+  width: 400px;
+  height: 250px;
+}
+.projects .container .box .text {
+  max-width: 400px;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  color: white;
+  padding: 50px 10px 30px;
+}
+@media (max-width:430px) {
+  .projects .container .box .image,
+  .projects .container .box .image img,
+  .projects .container .box .text {
+    width: 300px;
+  }
+}
+.projects .container .box .text h2 {
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 20px;
+
+}
+.projects .container .box .text p.special {
+  font-weight: 700;;
+}
+.projects .container .box .text p {
+  line-height: 1.7;
+}
+/* End Recent Projets */
