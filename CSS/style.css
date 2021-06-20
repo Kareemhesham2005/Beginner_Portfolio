@@ -307,17 +307,6 @@ h2 {
 .projects .container .four {
   flex-direction: row-reverse;
 }
-@media (max-width:833px) {
-  .projects .container {
-    width: fit-content;
-    padding: 0;
-  }
-  .projects .container .box {
-    flex-direction: column;
-    margin: 0 auto;
-    width: fit-content;
-  }
-}
 .projects .container .box .image {
   max-width: 400px;
   height: 250px;
@@ -336,6 +325,27 @@ h2 {
   width: 400px;
   height: 250px;
 }
+@media (max-width:833px) {
+  .projects .container {
+    width: fit-content;
+    padding: 0;
+  }
+  .projects .container .box {
+    flex-direction: column;
+    margin: 0 auto 35px;
+    width: fit-content;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    overflow: hidden;
+}
+  .projects .container .box .image,
+  .projects .container .box .image img {
+    height: 350px;
+  }
+}
 .projects .container .box .text {
   max-width: 400px;
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
@@ -343,10 +353,13 @@ h2 {
   padding: 50px 10px 30px;
 }
 @media (max-width:430px) {
-  .projects .container .box .image,
-  .projects .container .box .image img,
   .projects .container .box .text {
     width: 300px;
+  }
+  .projects .container .box .image,
+  .projects .container .box .image img {
+    width: 300px;
+    height: 300px;
   }
 }
 .projects .container .box .text h2 {
