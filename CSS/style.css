@@ -172,11 +172,34 @@ ul {
   -o-transform: translate(-50%, -50%);
 }
 .landing p {
-  font-size: 40px;
-  font-weight: 700;
+  font-size: 7rem;
+  font-weight: 600;
+  color: transparent;
+  position: relative;
+  animation: text_reveral 0.5s 1s ease forwards;
 }
-.landing span {
-  color: var(--main-color);
+.landing p:nth-child(2) {
+  animation-delay: 2s;
+}
+.landing .name {
+  font-weight: 500;
+  animation: text_reveral_name 0.5s ease forwards;
+  animation-delay: 3s;
+}
+@keyframes text_reveral {
+  100% {
+    color: white;
+  }
+}
+@keyframes text_reveral_name {
+  100% {
+    color: crimson;
+  }
+}
+@media (max-width:768px) {
+  .landing p {
+    font-size: 4rem;
+  }
 }
 .landing div {
   margin-top: 30px;
