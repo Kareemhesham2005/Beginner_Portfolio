@@ -126,6 +126,7 @@ ul {
   flex-wrap: wrap;
   line-height: 55px;
   position: relative;
+  z-index: 500;
 }
 @media (max-width: 768px) {
   .parent nav span ul {
